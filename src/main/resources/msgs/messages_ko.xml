@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key=""></entry>
+<entry key="title.main">AuditFinder Ver 1.0.</entry>
+<entry key="login.id">아이디</entry>
+<entry key="login.pw">비밀번호</entry>
+<entry key="login.loginstr">로그인</entry>
+<entry key="login.logoutstr">로그아웃</entry>
+<entry key="login.rememberstr">아이디 기억하기</entry>
+<entry key="login.error.title">로그인 에러:</entry>
+<entry key="login.logout.title">로그아웃 되었습니다...</entry>
+<entry key="success.msg">정상적으로 처리 되었습니다.</entry>
+<entry key="error.msg">에러 발생 : {0}</entry>
+<entry key="login.fails.msg">아이디 또는 비밀번호를 다시 확인하세요.</entry>
+<entry key="notlogin.notsession.msg">세션이 만료 되었습니다.</entry> 
+<entry key="invalidate_pageaccess">잘못 인도된 페이지입니다.</entry>
+<entry key="invavlidate_parameters">잘못 전달된 정보가 있습니다.</entry>
+<entry key="nopermission_pageaccess">페이지를 읽을 권한 이없습니다.</entry>
+<entry key="nopermission_apiaccess">권한이 없는  호출입니다.</entry>
+<entry key="Check.Null.Msg">{0} 을 입력해 주세요. {1} </entry>
+<entry key="Check.MinLength.Msg">{0} 의 값의 길이가 {1} 보다 작습니다.{2}</entry>
+<entry key="Check.MaxLength.Msg">{0} 의 값의 길이가 {1} 보다 큽니다.{2}</entry>
+<entry key="Check.MinValue.Msg">{0} 의 값이 {1} 보다 작습니다.{2}</entry>
+<entry key="Check.MaxValue.Msg">{0} 의 값이 {1} 보다 큽니다.{2}</entry>
+<entry key="Check.NotMatchValue.Msg">{0} 의 값이 {1} 이 아닙니다.{2}</entry>
+<entry key="Check.Invalide.Email"> {0} 는 정확한 Email 주소가 아닙니다.{1}</entry>
+<entry key="Check.Invalide.Regex"> {0} 값이 형식에 맞지 않습니다.{1}</entry>
+
+<entry key="Error.InvalidateParameter.Msg">잘못된 인수로 호출되었습니다.</entry>
+<entry key="Error.Exception.Msg">에러가 발생하였습니다. : {0} </entry>
+</properties>

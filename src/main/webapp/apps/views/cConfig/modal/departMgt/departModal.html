@@ -1,0 +1,33 @@
+<div class="modal-header">
+	<h4>
+		<span ng-if="status == 1">부서명 등록</span>
+		<span ng-if="status == 2">부서명 수정</span>
+	</h4>
+</div>
+<div class="modal-body">
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<th style="text-align: center; vertical-align: middle;">회사명</th>
+				<td>
+					{{cItm.name}}
+				</td>
+			</tr>
+			<tr>
+				<th style="text-align: center; vertical-align: middle;">부서명</th>
+				<td>
+					<input type="text" class="form-control" ng-model="itm.name">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="modal-footer">
+	<div style="float: right;">
+		<button class="btn btn-sm btn-primary" ng-click="regDepart()">
+			<span ng-if="status == 1"><i class="fa fa-plus"></i>등록</span>
+			<span ng-if="status == 2"><i class="fa fa-pencil"></i>수정</span>
+		</button>
+	    <button class="btn btn-sm btn-danger" ng-click="cancle()"><i class="fa fa-close "></i> 취소</button>
+  	</div>
+</div>

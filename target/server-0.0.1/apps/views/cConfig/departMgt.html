@@ -1,0 +1,63 @@
+<div class="animated fadeIn">
+	<h1 style="margin-left: 15px;">부서 관리</h1>
+	<br/>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    	회사명
+                </div>
+                <div class="card-block"  style="height: 300px;">
+                    <select id="multiple-select" name="multiple-select" class="form-control" multiple style="height: 100%;">
+	                    <option ng-repeat="company in companyList" ng-click="selectCompany(company)">{{company.name}}</option>
+	                </select>
+                </div>
+                <div class="card-footer">
+                	<div style="float: right;">
+	                	<button class="btn btn-sm btn-primary" ng-click="regCompany()"><i class="fa fa-plus"></i> 등록</button>
+	                    <button class="btn btn-sm btn-primary" ng-click="editCompany()"><i class="fa fa-pencil"></i> 수정</button>
+	                    <button class="btn btn-sm btn-danger" ng-click="delCompany()"><i class="fa fa-trash"></i> 삭제</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    	부서명
+                </div>
+                <div class="card-block" style="height: 300px;">
+                    <select id="multiple-select" name="multiple-select" class="form-control" multiple style="height: 100%;">
+	                    <option ng-repeat="depart in departList" ng-click="selectDepart(depart)">{{depart.name}}</option>
+	                </select>
+                </div>
+                <div class="card-footer">
+                    <div style="float: right;">
+	                	<button class="btn btn-sm btn-primary" ng-click="regDepart()"><i class="fa fa-plus"></i> 등록</button>
+	                    <button class="btn btn-sm btn-primary" ng-click="editDepart()"><i class="fa fa-pencil"></i> 수정</button>
+	                    <button class="btn btn-sm btn-danger" ng-click="delDepart()"><i class="fa fa-trash"></i> 삭제</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                   	팀명
+                </div>
+                <div class="card-block" style="height: 300px;">
+                    <select id="multiple-select" name="multiple-select" class="form-control" multiple style="height: 100%;">
+	                    <option ng-repeat="team in teamList" ng-click="selectTeam(team)">{{team.name}}</option>
+	                </select>
+                </div>
+                <div class="card-footer">
+                    <div style="float: right;">
+	                	<button class="btn btn-sm btn-primary" ng-click="regTeam()"><i class="fa fa-plus"></i> 등록</button>
+	                    <button class="btn btn-sm btn-primary" ng-click="editTeam()"><i class="fa fa-pencil"></i> 수정</button>
+	                    <button class="btn btn-sm btn-danger" ng-click="delTeam()"><i class="fa fa-trash"></i> 삭제</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

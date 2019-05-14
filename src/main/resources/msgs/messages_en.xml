@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key=""> </entry>
+<entry key="title.main">AuditFinder Ver. 1.0</entry>
+<entry key="login.id">ID</entry>
+<entry key="login.pw">Password</entry>
+<entry key="login.loginstr">Login</entry>
+<entry key="login.logoutstr">LogOut</entry>
+<entry key="login.rememberstr">Remember ID</entry>
+<entry key="login.error.title">Login Error:</entry>
+<entry key="login.logout.title">Now Logout...</entry>
+<entry key="success.msg">success !</entry>
+<entry key="error.msg">error : {0}</entry>
+<entry key="login.fails.msg">id or password is not corrected!</entry>
+<entry key="invalidate_pageaccess">Wrong Page...</entry>
+<entry key="invavlidate_parameters">The information is passed incorrectly</entry>
+<entry key="notlogin.notsession.msg">NotLogin or Session Expired...</entry>
+<entry key="nopermission_pageaccess">no permission to read the page.</entry>
+<entry key="nopermission_apiaccess">unauthorized Access.</entry>
+<entry key="Check.Null.Msg">{0} value is Empty {1} </entry>
+<entry key="Check.MinLength.Msg">The length of the value of {0} is less than {1}. {2}</entry>
+<entry key="Check.MaxLength.Msg">The length of the value of {0} is greater than {1}. {2}</entry>
+<entry key="Check.MinValue.Msg">The value of {0} is less than {1}. {2}</entry>
+<entry key="Check.MaxValue.Msg">The value of {0} is greater than {1}. {2}</entry>
+<entry key="Check.NotMatchValue.Msg">{0} is not {1} value. {2}</entry>
+<entry key="Check.Invalide.Email"> {0} is not valide Email Address {1}</entry>
+<entry key="Check.Invalide.Regex">The value of {0} does not match the format {1}</entry>
+<entry key="Error.InvalidateParameter.Msg">It was called with the wrong argument.</entry>
+<entry key="Error.Exception.Msg">Error.. : {0} </entry>
+</properties>

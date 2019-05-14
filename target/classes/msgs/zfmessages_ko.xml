@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="errmsg.parsejson">잘못된 정보가 전달되었습니다.</entry>
+<entry key="errmsg.notauth">아이디 또는 비밀번호가 정확하지 않습니다. {0}</entry>
+<entry key="errmsg.notlogined">로그인되어 있지 않습니다.</entry>
+<entry key="errmsg.notarget">점검대상이 없습니다. 대상을 등록하시거나 프로젝트를 변경하세요.</entry>
+<entry key="Error.Exception.Msg">에러가 발생하였습니다. : {0} </entry>
+<entry key="errmsg.faildisconnected">잘못전달된 오류가 많아 연결을 종료합니다. 다시 시도해 주세요.</entry>
+
+</properties>

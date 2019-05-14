@@ -1,0 +1,81 @@
+<div class="modal-header">
+	<h4>
+		<span ng-if="status == 1">Agent</span>
+		<span ng-if="status == 2">Agent 수정</span>
+		<span ng-if="status == 3">Agent 등록</span>
+	</h4>
+</div>
+<div class="modal-body">
+	<table class="table table-striped">
+		<tbody>
+			<tr ng-if="status != 3">
+				<th style="text-align: center; vertical-align: middle; width: 200px;">Agent ID</th>
+				<td>{{itm.agentId}}</td>
+			</tr>
+			<tr ng-if="status != 3">
+				<th style="text-align: center; vertical-align: middle;">Agent 등록 시간</th>
+				<td>{{itm.agentRegTime}}</td>
+			</tr>
+			<tr>
+				<th style="text-align: center; vertical-align: middle;">Agent User</th>
+				<td>
+					<span ng-if="status == 1">{{itm.agentUser}}</span>
+					<span ng-if="status != 1"><input type="text" class="form-control" ng-model="itm.agentUser"></span>
+				</td>
+			</tr>
+			<tr>
+				<th style="text-align: center; vertical-align: middle;">User Email</th>
+				<td>
+					<span ng-if="status == 1">{{itm.agentEmail}}</span>
+					<span ng-if="status != 1"><input type="text" class="form-control" ng-model="itm.agentEmail"></span>
+				</td>
+			</tr>
+			<tr>
+				<th style="text-align: center; vertical-align: middle;">Agent IP</th>
+				<td>
+					<span ng-if="status == 1">{{itm.agentIp}}</span>
+					<span ng-if="status != 1"><input type="text" class="form-control" ng-model="itm.agentIp"></span>
+				</td>
+			</tr>
+			<tr ng-if="status == 1">
+				<th style="text-align: center; vertical-align: middle;">부서</th>
+				<td>{{itm.companyName}}/{{itm.departName}}/{{itm.teamName}}                  
+				</td>
+			</tr>
+			<tr ng-if="status != 1">
+				<th style="text-align: center; vertical-align: middle;">부서</th>
+				<td>
+                    <select id="multiple-select" name="multiple-select" class="form-control" multiple style="height: 100%;">
+	                    <option ng-repeat="company in companyList" ng-click="selectCompany(company)">{{company.name}}</option>
+	                </select>
+	                <select id="multiple-select" name="multiple-select" class="form-control" multiple style="height: 100%;">
+	                    <option ng-repeat="depart in departList" ng-click="selectDepart(depart)">{{depart.name}}</option>
+	                </select>
+	                 <select id="multiple-select" name="multiple-select" class="form-control" multiple style="height: 100%;">
+	                    <option ng-repeat="team in teamList" ng-click="selectTeam(team)">{{team.name}}</option>
+	                </select>
+				</td>
+			</tr>
+			<tr ng-if="status != 3">
+				<th style="text-align: center; vertical-align: middle;">Agent Status</th>
+				<td>
+					<span ng-if="itm.agentStatus == 1" class="badge badge-success">정상</span>
+					<span ng-if="itm.agentStatus == 2" class="badge badge-danger">미사용</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="modal-footer">
+	<div style="float: right;">
+		<button ng-if="status != 3" class="btn btn-sm btn-primary" ng-click="editAgent()">
+			<span><i class="fa fa-pencil"></i>수정</span>
+		</button>
+		<button ng-if="status == 1" class="btn btn-sm btn-danger" ng-click="delAgent()"><i class="fa fa-close "></i> 삭제</button>
+		<button ng-if="status == 3" class="btn btn-sm btn-primary" ng-click="regAgent()"><i class="fa fa-plus "></i> 등록</button>
+	    <button class="btn btn-sm btn-success" ng-click="cancle()">
+	    	<span ng-if="status == 1"><i class="fa fa-list "></i> 목록</span>
+	    	<span ng-if="status != 1"><i class="fa fa-close "></i> 취소</span>
+	    </button>
+  	</div>
+</div>

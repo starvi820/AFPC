@@ -1,0 +1,48 @@
+<div class="modal-header">
+	<h4>
+		Agent 엑셀 등록
+	</h4>
+</div>
+<div class="modal-body" ng-if="status == 0">
+	<div class="form-group input-group" ng-show='attachitms.length > 0' ng-repeat="fitm in attachitms">
+		<input type="text" class="form-control" disabled="disabled" value='{{fitm.name}}'>
+		<span class="input-group-btn"> <button class="btn btn-danger"type="button" ng-click="rmfile($index)" ><i class="fa fa-trash"></i></button></span>
+	</div>
+	<div ngf-select="onFileSelect($files)" ngf-drop="onFileSelect($files)" ngf-multiple='false' ngf-keep-distinct='true'> 
+		<button class="btn btn-secondary" ng-if="attachitms.length == 0"><i class="fa fa-plus "></i> 파일 추가</button> 
+	</div> 
+	<hr/>
+	<a href="/cAgent/download.do"><button type="button" class="btn btn-outline-info btn-lg btn-block">양식 다운로드</button></a><br/>
+	<h6 class="text-danger">&nbsp;
+	 ※ 엑셀 파일 등록 시, 엑셀 파일 내 작성방법을 반드시 숙지하시기 바랍니다.<br/> &nbsp;
+	※ 양식 내의 부서명에는 반드시 부서 관리에 존재하는 부서명을 입력해 주시기 바랍니다.	</h6>
+
+</div>
+
+<div class="modal-body" ng-if="status == 1">
+	<table class="table table-striped">
+		<tr>
+			<th style="text-align: center; vertical-align: middle;">Agent ID</th>
+			<th style="text-align: center; vertical-align: middle;">User</th>
+			<th style="text-align: center; vertical-align: middle;">등록여부</th>
+		</tr>
+		<tr ng-repeat="itm in itms">
+			<td style="text-align: center; vertical-align: middle;">{{itm.first}}</td>
+			<td style="text-align: center; vertical-align: middle;">{{itm.second}}</td>
+			<td style="text-align: center; vertical-align: middle;">
+				<span ng-if="itm.third == 1" class="badge badge-success">등록 성공</span>
+				<span ng-if="itm.third == 0" class="badge badge-danger">등록 실패</span>
+			</td>
+		</tr>
+	</table>
+
+</div>
+<div class="modal-footer">
+	<div style="float: right;" ng-if="status == 0">
+		<button class="btn btn-sm btn-primary" ng-click="regExcel()"><i class="fa fa-plus "></i> 등록</button>
+	    <button class="btn btn-sm btn-success" ng-click="cancle()"><i class="fa fa-close "></i> 취소</button>
+  	</div>
+  	<div style="float: right;" ng-if="status == 1">
+	    <button class="btn btn-sm btn-success" ng-click="cancle()"><i class="fa fa-close "></i> 닫기</button>
+  	</div>
+</div>

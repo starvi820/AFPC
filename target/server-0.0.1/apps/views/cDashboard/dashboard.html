@@ -1,0 +1,79 @@
+<div class="col-lg-6 col-md-12">
+			<div class="panel panel-default" style="height: 410px;">
+				<div class="panel-heading" style="padding: 1px 15px">
+					<p class="fa fa-square-o" /> 최신 버전정보	
+				</div>
+				<div class="panel-body">
+					<ul class="nav nav-tabs">
+						<li ng-click="versionview(1)" ng-class="{active: isActive(1)}">
+							<a href="">MS</a>
+						</li>
+						<li ng-click="versionview(2)"	ng-class="{active: isActive(2)}">
+							<a href="">Adobe</a>
+						</li>
+						<li ng-click="versionview(3)" ng-class="{active: isActive(3)}">
+							<a href="">FlashPlayer</a>
+						</li>
+						<li ng-click="versionview(4)" ng-class="{active: isActive(4)}">
+							<a href="">Java</a>
+						</li>
+					</ul>
+					<div class = "row">
+						<table class="table table-striped table-bordered">
+							<thead class="fix-thead-version">
+								<tr ng-if= "version == 1">
+									<th style="text-align: center; vertical-align: middle; border-left: 0px;">번호</th>
+									<th style="text-align: center; vertical-align: middle;">Bulletin ID</th>
+									<th style="text-align: center; vertical-align: middle;">Bulletin KB</th>
+									<th style="text-align: center; vertical-align: middle;">업데이트날짜</th>
+								</tr>
+								<tr ng-if= "version == 2">
+									<th style="width: 50px; text-align: center; vertical-align: middle; border-left: 0px;">번호</th>
+									<th style="text-align: center; vertical-align: middle;">이름</th>
+									<th style="width: 180px; text-align: center; vertical-align: middle;">버전명</th>
+									<th style="width: 120px; text-align: center; vertical-align: middle;">업데이트날짜</th>
+								</tr>
+								<tr ng-if= "version == 3">
+									<th style="width: 50px; text-align: center; vertical-align: middle; border-left: 0px;">번호</th>
+									<th style="width: 100px; text-align: center; vertical-align: middle;">OS</th>
+									<th style="text-align: center; vertical-align: middle;">Browser</th>
+									<th style="width: 140px; text-align: center; vertical-align: middle;">버전명</th>
+								</tr>
+								<tr ng-if= "version == 4">
+									<th style="width: 50px; text-align: center; vertical-align: middle; border-left: 0px;">번호</th>
+									<th style="text-align: center; vertical-align: middle;">이름</th>
+									<th style="width: 120px; text-align: center; vertical-align: middle;">업데이트날짜</th>
+								</tr>
+							</thead>
+							<tbody class="tbody tr:first-child td">
+								<tr ng-if = "version == 1" ng-repeat="row in hotfix_info" style="width:610px">
+										<td style="width: 50px; text-align: center; vertical-align: middle; border-bottom: 0px; border-left: 0px;">{{$index+1}}</td>
+										<td style="width: 150px;text-align: center; vertical-align: middle; border-bottom: 0px;"><a ng-click="viewhotfix(row)"><u>{{row.bulletin_id}}</u></a></td>
+										<td style="text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.bulletin_kb}}</td>
+										<td style="width: 120px; text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.date_posted}}</td>
+								</tr>
+								<tr ng-if = "version == 2" ng-repeat="row in acrobat_info" style="width:610px;">
+										<td style="width: 50px; text-align: center; vertical-align: middle; border-bottom: 0px;border-left: 0px;">{{$index+1}}</td>
+										<td style="text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.acrobatName}}</td>
+										<td style="width: 180px; text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.acrobatVersion}}</td>
+										<td style="width: 120px; text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.acrobatDate}}</td>
+								</tr>
+								<tr ng-if = "version == 3" ng-repeat="row in flash_info" style="width:610px">
+									<td style="width: 50px; text-align: center; vertical-align: middle; border-bottom: 0px; border-left: 0px;">{{$index+1}}</td>
+									<td style="width: 100px; text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.flashPlatform}}</td>
+									<td style="text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.flashBrowser}}</td>
+									<td style="width: 140px; text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.flashVersion}}</td>
+								</tr>
+								<tr ng-if ="version == 4" ng-repeat="row in java_info" style="width:610px">
+									<td style="width: 50px; text-align: center; vertical-align: middle; border-bottom: 0px; border-left: 0px;">{{$index+1}}</td>
+									<td style="text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.javaVersion}}</td>
+									<td style="width: 120px; text-align: center; vertical-align: middle; border-bottom: 0px;">{{row.javaDate}}</td>
+								</tr>
+								
+							</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,67 @@
+
+<h1 style="margin-left: 15px;">통계</h1>
+<button class="btn btn-sm btn-primary" ng-click="regDate()">날짜별 보기
+</button>
+<br />
+
+
+
+<div class="row">
+	<div class="col-lg-4 col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading" style="padding: 1px 15px;">
+				<p class="fa fa-square-o" />
+				점검형태 비율
+				<canvas id="pie" class="chart chart-pie" chart-data="data"
+					chart-labels="labels" chart-options="options">
+</canvas>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading" style="padding: 1px 15px;">
+				<p class="fa fa-square-o" />
+				점검 수행일 별 점검 Agent 수
+
+				<canvas id="bar" class="chart chart-bar" chart-data="data2"
+					chart-labels="labels2">
+</canvas>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-default">
+			<p class="fa fa-square-o" />
+			점검 수행일 별 결과 수
+
+			<canvas id="bar2" class="chart chart-bar" chart-data="data3"
+				chart-labels="labels3" chart-series= "series3"> 
+</canvas>
+
+
+		</div>
+	</div>
+	
+	<div class="col-lg-8 col-md-12">
+		<p class="fa fa-square-o" />
+		부서별 점검 상태
+		<canvas id="base" class="chart-horizontal-bar" chart-data="data5"
+			chart-labels="labels5" chart-series = "series5">
+</canvas>
+
+	</div>
+</div>
+
+
+
+
+
+
+

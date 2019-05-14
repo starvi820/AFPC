@@ -1,0 +1,47 @@
+<div class="modal-header">
+	<h3 class="modal-title" ng-if="status==1">{{itm.bulletin_id}}</h3>
+	<h3 class="modal-title" ng-if="status==2">전체보기</h3>
+</div>
+
+<div class="modal-body" style="height:510px;">
+	<div style="float: center;" >
+		<a  ng-if = "status == 1" href="https://technet.microsoft.com/library/security/{{itm.bulletin_id}}" target="_blank">ID 요약보기</a>&nbsp;&nbsp;
+		<a  ng-if = "status == 1" href="https://support.microsoft.com/en-us/kb/{{itm.bulletin_kb}}" target="_blank">KB 요약보기</a>&nbsp;&nbsp;
+		<button  ng-if = "status == 1" type="button" class="btn btn-warning" ng-click="allview()">전체 목록</button>	
+		<select  ng-if = "status == 2" ng-model="retval.selectedId" ng-options="itm as itm.bulletin_id for itm in IDItems" ng-change ="selectedId(retval.selectedId.bulletin_id)"><option value="" selected disabled>bulletin ID</option></select>
+	</div>
+	
+	<br/>
+       <div style="overflow-y:scroll;overflow-x:hidden;  width:780px; height: 450px; background: transparent;">
+		<table class="table" style="table-layout:fixed;">
+			<thead class="fix-thead-white">
+	       		 <tr>
+					<th width="40" style="text-align: center; vertical-align: middle;">번호</th>
+					<th width="70" style="text-align: center; vertical-align: middle;">Bulletin ID</th>
+					<th width="70" style="text-align: center; vertical-align: middle;">Bulletin KB</th>
+					<th width="80" style="text-align: center; vertical-align: middle;">이름</th>
+					<th width="70" style="text-align: center; vertical-align: middle;">영향받는 제품</th>
+					<th width="70" style="text-align: center; vertical-align: middle;">영향받는 요소</th>
+					<th width="70" style="text-align: center; vertical-align: middle;">CVE</th>
+					<th width="70" style="text-align: center; vertical-align: middle;">업데이트날짜</th>
+				</tr>	
+	        </thead>
+			<tbody class="tbody tr:first-child td">
+				<tr ng-repeat="row in hotfix_info_detail"  width:780px;">
+					<td style="width:40px; text-align: center; vertical-align: middle;">{{$index+1}}</td>
+					<td style="width:70px;text-align: center; vertical-align: middle;">{{row.bulletin_id}}</td>
+					<td style="width:70px;text-align: center; vertical-align: middle;">{{row.bulletin_kb}}</td>
+					<td style="width:80px;text-align: center; vertical-align: middle;">{{row.title}}</td>
+					<td style="width:70px;text-align: center; vertical-align: middle;">{{row.affected_product}}</td>
+					<td style="width:70px;text-align: center; vertical-align: middle;">{{row.affected_component}}</td>
+					<td style="width:70px;text-align: center; vertical-align: middle;">{{row.cves}}</td>
+					<td style="width:70px;text-align: center; vertical-align: middle;">{{row.date_posted}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="modal-footer">
+
+   	 <button class="btn btn-warning" ng-click="cancel()">확인</button>
+</div>

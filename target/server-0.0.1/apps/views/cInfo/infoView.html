@@ -1,0 +1,42 @@
+<div class="animated fadeIn">
+	<h1 style="margin-left: 15px;">알림</h1>
+	<br />
+	<div class="col-lg-12">
+		<div class="card">
+			<br/>
+			<div class="card-block">
+				<div class="row">
+					<table class="table table-striped table-bordered">
+						<tr>
+							<th style="text-align: center; vertical-align: middle; width: 200px;">제목</th>
+							<td ng-if="status == 1" style="vertical-align: middle;">{{itm.title}}</td>
+							<td ng-if="status == 2" style="vertical-align: middle;"><input type="text" class="form-control" ng-model="itm.title"></td>
+							<td ng-if="status == 3" style="vertical-align: middle;"><input type="text" class="form-control" ng-model="itm.title"></td>
+						</tr>
+						<tr ng-if="status != 3">
+							<th style="text-align: center; vertical-align: middle;">작성자</th>
+							<td style="vertical-align: middle;">{{itm.af_admin_id}}</td>
+						</tr>
+						<tr ng-if="status == 1">
+							<th style="text-align: center; vertical-align: middle;">작성일</th>
+							<td style="vertical-align: middle;">{{itm.regDate}}</td>
+						</tr>
+						<tr>
+							<th style="text-align: center; vertical-align: middle;">내용</th>
+							<td ng-if="status == 1" style="vertical-align: middle;" ng-bind-html="itm.content | to_trusted">{{itm.content}}</td>
+							<td ng-if="status == 2"><div text-angular ng-model="itm.content"></div></td>
+							<td ng-if="status == 3"><div text-angular ng-model="itm.content"></div></td>
+						</tr>
+					</table>
+				</div>
+				<div class="row" style="float: right;">
+					<button type="button" class="btn btn-primary" ng-if="status == 3" ng-click="regInfo()"><i class="fa fa-plus"></i>&nbsp; 등록 </button> &nbsp;
+					<button type="button" class="btn btn-primary" ng-if="status != 3"ng-click="edtInfo()"><i class="fa fa-pencil-square-o"></i>&nbsp; 수정</button>&nbsp;
+					<button type="button" class="btn btn-danger" ng-if="status == 1 "ng-click="delInfo()"><i class="fa fa-trash"></i>&nbsp; 삭제</button>&nbsp;
+					<button type="button" class="btn btn-success" ng-click="goBack()"><i class="fa fa-list"></i>&nbsp; 목록</button>&nbsp;
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.0.201707061730-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>java:one.auditfinder.server.comps.AuthUtils</config>
+		<config>java:one.auditfinder.server.comps.CommonUtils</config>
+		<config>java:one.auditfinder.server.webcomps.files.downloadView</config>
+		<config>java:one.auditfinder.server.config.FileConfig</config>
+		<config>java:one.auditfinder.server.webcomps.files.ImageShowView</config>
+		<config>java:one.auditfinder.server.comps.MsgUtils</config>
+		<config>java:one.auditfinder.server.config.RootConfig</config>
+		<config>java:one.auditfinder.server.comps.RsaUtils</config>
+		<config>java:one.auditfinder.server.comps.ValidateUtils</config>
+		<config>java:one.auditfinder.server.config.WebConfig</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

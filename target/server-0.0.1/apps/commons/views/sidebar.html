@@ -1,0 +1,40 @@
+<div class="sidebar" style="position: absolute; margin-top: -1px;  height: 100%;">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+        
+        <li class="nav-item">
+            <a class="nav-link" ng-class="active" href="/page/cDashboard"><i class="fa fa-dashboard"></i> Dashboard </a>
+        </li>
+        <li class="devider"></li>
+        <li class="nav-title">
+        	Info
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" ui-sref-active="active" href="/page/cInfo"><i class="fa fa-info"></i> 알림 </a>
+        </li>
+        
+        <li class="devider"></li>
+        <li class="nav-title">
+        	menu
+        </li>
+        
+        <accordion>
+		    <accordion-group ng-repeat="group in groups" heading="{{group.title}}" is-open="group.open">
+		     	<accordion-heading>
+			      	<div class="nav-item">
+		                <a class="nav-link" style="font-size:14px; color: #ffffff;"><i class="{{group.icon}}"></i> {{group.title}} <span style="float:right;">></span> </a>
+	                </div>
+		      	</accordion-heading>
+		      <div ng-repeat="item in group.content">
+		      		<li class="nav-item" style="background-color: #1e282d;">
+                        <a class="nav-link" href="{{item.path}}"><i class="{{item.icon}}"></i>{{item.name}}</a>
+                    </li>
+		      </div>
+		    </accordion-group>    
+		  </accordion>
+           
+        </ul>
+    </nav>
+</div>
+
+
